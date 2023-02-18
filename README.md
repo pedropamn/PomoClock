@@ -30,7 +30,7 @@
   <h1 align="center">PomoClock</h1>
 
   <p align="center">
-    Um Timer Pomodoro para Android
+    Gerencie seu tempo com um Timer Pomodoro para Android!
     <br />
     <a target="_blank" href="https://play.google.com/store/apps/details?id=com.pamn.pomoclock&hl=gsw"><img src="https://play.google.com/intl/pt-BR/badges/static/images/badges/pt-br_badge_web_generic.png" alt="Logo" width="150" height="60"></a>
     <br />
