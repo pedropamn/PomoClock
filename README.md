@@ -50,7 +50,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre o Projeto
 
-<div style="text-align: center; width: 100%; margin: auto;">
+<div align="center">
   <img src="https://play-lh.googleusercontent.com/pyCSpYMJq9gbGEsWa3rX8eHBrV2wgfSu67w-bDy76SKkHzSeanLQh-G2l0PFwx_h3Iw=w2560-h1440-rw" width="200" height="300" /><img src="https://play-lh.googleusercontent.com/rC-9ewUFUMd7smg3nD298TQztGyxungkSuyjJU4eJiFTgeovHELDG8XzFvr2w-Zd9nE=w2560-h1440-rw" width="200" height="300"/><img src="https://play-lh.googleusercontent.com/oL9eY1yp5RcKb6RIwe_fVDESST9UcVd2BUXqg_OF-yWmQPfS-vOVMCdf7xQHGy1YHg=w2560-h1440-rw" width="200" height="300"/>
 </div>
 
