@@ -110,10 +110,17 @@ O projeto foi feito com os seguintes plugins para Cordova:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- CONTRIBUTING -->
+## Alterações necessárias
+
+Você precisará substituir os valores em `app.js`:
+
+* `ONESIGNALAPPID` pela sua próprio APP ID do OneSignal
+* `adUnitId: 'ca-app-pub-1111111111111111/2222222222222222'`, pela sua própria chave do Google AdMob
+
 
 <!-- CONTRIBUTING -->
 ## Contribua
-
 
 Para contribuir com o projeto, faça o Fork do projeto e envie sua feature via Pull Request:
 
@@ -122,6 +129,9 @@ Para contribuir com o projeto, faça o Fork do projeto e envie sua feature via P
 3. Commit (`git commit -m 'Add some AmazingFeature'`)
 4. Push (`git push origin feature/AmazingFeature`)
 5. Abra uma Pull Request
+
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
