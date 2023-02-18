@@ -28,12 +28,12 @@
     <img src="https://raw.githubusercontent.com/pedropamn/PomoClock/main/www/img/pomodoro.ico" alt="Logo" width="100" height="100">
   </a>
 
-  <h3 align="center">PomoClock</h3>
+  <h1 align="center">PomoClock</h1>
 
   <p align="center">
     Um Timer Pomodoro para Android
     <br />
-    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.pamn.pomoclock&hl=gsw"><img src="https://play.google.com/intl/pt-BR/badges/static/images/badges/pt-br_badge_web_generic.png" alt="Logo" width="200" height="100"></a>
+    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.pamn.pomoclock&hl=gsw"><img src="https://play.google.com/intl/pt-BR/badges/static/images/badges/pt-br_badge_web_generic.png" alt="Logo" width="150" height="50"></a>
     <br />
     <br />
     <a href="https://play.google.com/store/apps/details?id=com.pamn.pomoclock&hl=gsw">Play Store</a>
