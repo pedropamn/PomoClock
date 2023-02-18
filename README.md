@@ -24,9 +24,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="https://raw.githubusercontent.com/pedropamn/PomoClock/main/www/img/pomodoro.ico" alt="Logo" width="100" height="100">
-  </a>
+
 
   <h1 align="center">PomoClock</h1>
 
