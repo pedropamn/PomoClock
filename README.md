@@ -25,22 +25,22 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://raw.githubusercontent.com/pedropamn/PomoClock/main/www/img/pomodoro.ico" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">PomoClock</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Um Timer Pomodoro para Android
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <img src="https://play.google.com/intl/pt-BR/badges/static/images/badges/pt-br_badge_web_generic.png" alt="Logo" width="150" height="50">
     <br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">Play Store</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Reportar Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Sugerir Funcionalidade</a>
   </p>
 </div>
 
@@ -48,12 +48,12 @@
 
 <!-- TABLE OF CONTENTS -->
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Tabela de Conteúdo</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">Sobre o projeto</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">Feito com</a></li>
       </ul>
     </li>
     <li>
@@ -75,37 +75,32 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## Sobre o Projeto
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+PomoClock é um simples Timer Pomodoro para Android. Com ele, você pode gerenciar tarefas e gerir seu tempo com a técnica Pomodoro, que institui um tempo de foco (geralmente 25 minutos) e um tempo de descanso (geralmente 5 minutos), customizável no app
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+Características:
+* Gerencie seu foco
+* Customize seu tempo
+* Seja mais produtivo :smile:
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-### Built With
+### Feito com
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+PomoClock foi criado com as seguintes tecnologias
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+<img src="https://img.shields.io/badge/-Framework7-red?style=for-the-badge&logo=framework7&logoColor=white"></img>
+<img src="https://img.shields.io/badge/-Javascript-yellow?style=for-the-badge&logo=javascript&logoColor=white"></img>
+<img src="https://img.shields.io/badge/-CSS-orange?style=for-the-badge&logo=css3&logoColor=white"></img>
+<img src="https://img.shields.io/badge/-HTML-blue?style=for-the-badge&logo=html5&logoColor=white"></img>
+<img src="https://img.shields.io/badge/-Cordova-black?style=for-the-badge&logo=apachecordova&logoColor=white"></img>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
