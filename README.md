@@ -33,51 +33,28 @@
   <p align="center">
     Um Timer Pomodoro para Android
     <br />
-    <img src="https://play.google.com/intl/pt-BR/badges/static/images/badges/pt-br_badge_web_generic.png" alt="Logo" width="150" height="50">
+    <a target="_blank" href="https://play.google.com/store/apps/details?id=com.pamn.pomoclock&hl=gsw"><img src="https://play.google.com/intl/pt-BR/badges/static/images/badges/pt-br_badge_web_generic.png" alt="Logo" width="150" height="50"></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">Play Store</a>
+    <a href="https://play.google.com/store/apps/details?id=com.pamn.pomoclock&hl=gsw">Play Store</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Reportar Bug</a>
+    <a href="https://github.com/pedropamn/PomoClock/issues">Reportar Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Sugerir Funcionalidade</a>
+    <a href="https://github.com/pedropamn/PomoClock/issues">Sugerir Funcionalidade</a>
   </p>
 </div>
 
-
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Tabela de Conteúdo</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">Sobre o projeto</a>
-      <ul>
-        <li><a href="#built-with">Feito com</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
 
 
 
 <!-- ABOUT THE PROJECT -->
 ## Sobre o Projeto
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<div style="text-align: center; width: 100%; margin: auto;">
+  <img src="https://play-lh.googleusercontent.com/pyCSpYMJq9gbGEsWa3rX8eHBrV2wgfSu67w-bDy76SKkHzSeanLQh-G2l0PFwx_h3Iw=w2560-h1440-rw" width="200" height="300" /><img src="https://play-lh.googleusercontent.com/rC-9ewUFUMd7smg3nD298TQztGyxungkSuyjJU4eJiFTgeovHELDG8XzFvr2w-Zd9nE=w2560-h1440-rw" width="200" height="300"/><img src="https://play-lh.googleusercontent.com/oL9eY1yp5RcKb6RIwe_fVDESST9UcVd2BUXqg_OF-yWmQPfS-vOVMCdf7xQHGy1YHg=w2560-h1440-rw" width="200" height="300"/>
+</div>
+
+<br><br>
 
 PomoClock é um simples Timer Pomodoro para Android. Com ele, você pode gerenciar tarefas e gerir seu tempo com a técnica Pomodoro, que institui um tempo de foco (geralmente 25 minutos) e um tempo de descanso (geralmente 5 minutos), customizável no app
 
