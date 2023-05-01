@@ -104,7 +104,9 @@ O projeto foi feito com os seguintes plugins para Cordova:
 ## Roadmap
 
 - [x] Atualizar mensagens
-- [ ] Adicionar notificação na barra de progresso
+- [ ] Adicionar notificação com barra de progresso
+- [ ] Alerta antes do anúncio
+- [ ] Vibração ao entrar e sair do tempo de descanso
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
