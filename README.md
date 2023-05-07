@@ -87,12 +87,6 @@ O projeto foi feito com os seguintes plugins para Cordova:
 
 `admob-plus-cordova`
 
-`cordova-plugin-badge`
-
-`cordova-plugin-device`
-
-`cordova-plugin-local-notification`
-
 `cordova-plugin-web-share`
 
 `cordova-support-android-plugin`
