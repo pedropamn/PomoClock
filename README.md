@@ -104,6 +104,7 @@ O projeto foi feito com os seguintes plugins para Cordova:
 - [ ] Vibração com a tela desativada
 - [ ] Adicionar notificação com barra de progresso
 - [ ] Estatísticas com tempo total e conquistas
+- [ ] Novas animações
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
