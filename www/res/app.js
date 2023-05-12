@@ -44,12 +44,26 @@ function onDeviceReady() {
 	OneSignalInit();
 
 
+	   
 	   //Admob
 	  interstitial = new admob.InterstitialAd({
-		adUnitId: 'ca-app-pub-1111111111111111/2222222222222222', //Prod
-	})
+		adUnitId: 'ca-app-pub-111111111111111111/2222222222222', //Prod
+		//adUnitId: 'ca-app-pub-111111111111111111111/222222', //Test
+	  })
 	
 	interstitial.load();  
+	
+	//Anúncio é fechado
+	document.addEventListener('admob.ad.dismiss', async () => {
+	  
+	  //Inicia o carregamento de outro
+	  await interstitial.load()
+	  
+	  //Reinicia o contador sozinho, mas sem o aviso de anúncio (parâmetro 'false')
+	  //inicia_contador_ciclo(false);
+	})
+	
+	
   
   
  
@@ -78,10 +92,10 @@ function onDeviceReady() {
 	
 				
 		$$('.info').click(function(){
-				var device_info = ' - Modelo: '+device.model+
+				/*var device_info = ' - Modelo: '+device.model+
 								' - Plataforma: '+device.platform+
 								' - Versão: '+device.version+
-								' - Fabricante: '+device.manufacturer;
+								' - Fabricante: '+device.manufacturer;*/
 								
 				
 								
@@ -95,7 +109,7 @@ function onDeviceReady() {
 														'<li>A técnica consiste na utilização de um cronômetro para dividir o trabalho em períodos de 25 minutos (por padrão), separados por breves intervalos</li><br>'+
 														'<li>Seu nome deriva da palavra italiana pomodoro (tomate), como referência ao popular cronômetro gastronômico na forma dessa fruta. O método é baseado na ideia de que pausas frequentes podem aumentar a agilidade mental</li>'+
 												 '</div>'+
-												  '<div class="card-footer">'+app.name+', por Pedro Neto Web<a style="margin: auto; width: 100%;" class="link external" href="mailto:apps@pedronetoweb.com.br?subject=PomoClock"><button class="contato col button button-fill color-green">Contato</button></a></div>'+
+												  '<div class="card-footer">'+app.name+' v1.0.3, por Pedro Neto Web<a style="margin: auto; width: 100%;" class="link external" href="mailto:apps@pedronetoweb.com.br?subject=PomoClock"><button class="contato col button button-fill color-green">Contato</button></a></div>'+
 												  '<button class="popup-close col button button-fill color-blue compartilhar">Compartilhar</button>'+
 												'<button class="popup-close col button button-fill color-orange">Fechar</button>'
 
@@ -182,6 +196,14 @@ function onDeviceReady() {
 		hammertime.on('tap', function(ev) {
 			if(sessionStorage.contador_descanso_iniciado != 'true'){
 				inicia_contador_ciclo();
+			}
+			else{
+				//Alerta de Long press para mais opções
+				 var longPressForMore = app.toast.create({
+					text: 'Toque e segure o contador para mais opções',
+					closeTimeout: 2000,
+				  });
+				  longPressForMore.open();
 			}
 				
 		});
@@ -299,29 +321,59 @@ function onDeviceReady() {
 		}
 		
 		
-		function inicia_contador_ciclo(){		
-				
+		function inicia_contador_ciclo(exibirAd = true, retomada_de_trabalho = false){				
 				
 				//Atualiza gauge
 				gauge.update({
 					labelText: 'Com '+Math.floor(localStorage.descanso_padrao / 60)+' minutos de descanso',
 					borderColor: 'red'
-				});	
+				});
+
+				
+				
+					
 				
 				//Se o Timer não está correndo, inicia
 				if($$('.hidden').data('exec') == 'false'){
 					
-					//Verifica se o tempo atual corresponde ao tempo inicial configurado
-					if(sessionStorage.tempo == localStorage.tempo_padrao){
-						interstitial.show()
+					//Caso esteja iniciando e não seja uma retomada de trabalho (iniciado automaticamente depois do descanso)
+					if(retomada_de_trabalho == false){
+						beep('INICIANDO_CONTADOR');
 					}
+					
+					var adNotif = app.notification.create({
+						  //icon: '<i class="icon icon-f7"></i>',
+						  title: 'Alerta de anúncio',
+						  titleRightText: 'agora',
+						  subtitle: 'Um anúncio poderá aparecer agora. Mantenha o foco para ver menos anúncios ',
+						  //text: 'This is a simple notification message',
+						  closeTimeout: 3000,
+					});
+					
+					
+					//Verifica se o tempo atual corresponde ao tempo inicial configurado
+					//if(sessionStorage.tempo == localStorage.tempo_padrao){
+						//interstitial.show()
+					
+					//Se true, exibie o anúncio
+					if(exibirAd == true){						
+						
+						adNotif.open();
+						
+						setTimeout(function() {
+						  interstitial.show();
+						}, 3000);
+					}
+						
+					//}
+					
 					
 					$$('.hidden').data('exec','true');
 					$$('.tomate').show();
 					$$('.tomate').removeClass('ld-swim');
 					$$('.tomate').addClass('ld-clock');
-					beep('ciclo');
-					navigator.vibrate([100,10,100]);
+					//beep('ciclo');
+					navigator.vibrate([2000]);
 					
 					x = setInterval(function(){
 						sessionStorage.tempo = sessionStorage.tempo - 1;			
@@ -330,9 +382,36 @@ function onDeviceReady() {
 							value: sessionStorage.tempo / localStorage.tempo_padrao
 						});	
 						
+						//Check para áudio
+						if(sessionStorage.tempo == 60){
+							//1 min para descanso
+							beep('UM_MIN_PARA_DESCANSO');
+						}
+						else if(sessionStorage.tempo == 300){
+							//1 min para descanso
+							beep('CINCO_MIN_PARA_DESCANSO');
+						}
+						/*cordova.plugins.notification.local.schedule({
+							title: 'Pomodoro em progresso',
+							text: 'Pomodoro em progresso',
+							progressBar: { value: sessionStorage.tempo / localStorage.tempo_padrao }
+						});*/
+						
+						/*function showProgressBarNotification() {
+						  var title = "Teste Title";
+						  var message = "Teste message";
+						  var maxProgress = 100;
+						  cordova.exec(null, null, 'ProgressBarNotification', 'show', [title, message, maxProgress]);
+
+						}
+
+						showProgressBarNotification();*/
+
+
+						
 						//Se o tempo é atingir 0, para o contador e inicia o contador do descanso
 						if(sessionStorage.tempo == 0){
-							
+														
 							//Para o contador
 							clearInterval(x);
 							
@@ -355,6 +434,7 @@ function onDeviceReady() {
 					$$('.hidden').data('exec','false');
 					clearInterval(x);
 					$$('.tomate').hide();
+					beep('PAUSANDO_CONTADOR')
 					
 				}
 			
@@ -362,8 +442,8 @@ function onDeviceReady() {
 		
 		
 		function inicia_contador_descanso(){
-			beep('descanso');
-			navigator.vibrate([100,10,100,10,100]);
+			beep('DESCANSO');
+			navigator.vibrate([2000]);
 			$$('.tomate').removeClass('ld-clock');
 			$$('.tomate').addClass('ld-swim');
 			sessionStorage.contador_descanso_iniciado = 'true';
@@ -382,9 +462,14 @@ function onDeviceReady() {
 					
 					//Se o tempo é atingir 0, para o contador e inicia o contador de ciclo
 					if(sessionStorage.descanso == 0){
+						beep('DE_VOLTA_AO_TRABALHO');
 						clearInterval(y);
 						sessionStorage.contador_descanso_iniciado = 'false';
-						inicia_contador_ciclo();
+						inicia_contador_ciclo(false, true);
+					}
+					
+					if(sessionStorage.descanso == 60){
+						beep('UM_MIN_PARA_VOLTAR')
 					}
 					sessionStorage.descanso = sessionStorage.descanso - 1;
 					
@@ -449,15 +534,45 @@ function onDeviceReady() {
 		  }
 		  
 		  
-		  function beep(tipo){
-			  if(tipo == 'ciclo'){
+		  function beep(str){
+			  
+			  if(str == 'UM_MIN_PARA_DESCANSO'){
+				 var audio = new Audio('audio/camila/um_min_para_descanso.mp3');
+				 audio.play(); 
+			  }
+			  else if(str == 'CINCO_MIN_PARA_DESCANSO'){
+				 var audio = new Audio('audio/camila/cinco_min_para_descanso.mp3');
+				 audio.play(); 
+			  }
+			  else if(str == 'INICIANDO_CONTADOR'){
+				 var audio = new Audio('audio/camila/iniciando_contador.mp3');
+				 audio.play(); 
+			  }
+			  else if(str == 'DESCANSO'){
+				 var audio = new Audio('audio/camila/descanso.mp3');
+				 audio.play(); 
+			  }
+			  else if(str == 'DE_VOLTA_AO_TRABALHO'){
+				 var audio = new Audio('audio/camila/de_volta_ao_trabalho.mp3');
+				 audio.play(); 
+			  }
+			  else if(str == 'PAUSANDO_CONTADOR'){
+				 var audio = new Audio('audio/camila/pausando_contador.mp3');
+				 audio.play(); 
+			  }
+			  else if(str == 'UM_MIN_PARA_VOLTAR'){
+				  var audio = new Audio('audio/camila/um_minuto_para_voltar.mp3');
+				 audio.play(); 
+			  }
+			  
+			  /*if(tipo == 'ciclo'){
 				 var audio = new Audio('audio/alert_1.mp3');
 				 audio.play(); 
 			  }
 			  else{
 				   var audio = new Audio('audio/alert_2.mp3');
 				   audio.play();
-			  }
+			  }*/
 			  
 		  }
 		  
@@ -471,8 +586,3 @@ function onDeviceReady() {
 	//View (tem que ser declarado por último, senão as funções acima não funcionam)
 	var mainView = app.views.create('.view-main');
 }
-
-
-
-
-	
