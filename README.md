@@ -98,10 +98,12 @@ O projeto foi feito com os seguintes plugins para Cordova:
 ## Roadmap
 
 - [x] Atualizar mensagens
-- [ ] Vibração ao entrar e sair do tempo de descanso
-- [ ] Vozes no app (pt-br)
-- [ ] Alerta antes do anúncio
+- [x] Vozes no app (pt-br)
+- [x] Vibração ao entrar e sair do tempo de descanso
+- [x] Alerta antes do anúncio
+- [ ] Vibração com a tela desativada
 - [ ] Adicionar notificação com barra de progresso
+- [ ] Estatísticas com tempo total e conquistas
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
