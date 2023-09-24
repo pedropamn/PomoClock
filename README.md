@@ -30,16 +30,16 @@
   <h1 align="center">PomoClock</h1>
 
   <p align="center">
-    Gerencie seu tempo com um Timer Pomodoro para Android!
+    Manage your time with a Pomodoro Timer for Android!
     <br />
     <a target="_blank" href="https://play.google.com/store/apps/details?id=com.pamn.pomoclock&hl=gsw"><img src="https://play.google.com/intl/pt-BR/badges/static/images/badges/pt-br_badge_web_generic.png" alt="Logo" width="150" height="60"></a>
     <br />
     <br />
     <a href="https://play.google.com/store/apps/details?id=com.pamn.pomoclock&hl=gsw">Play Store</a>
     ·
-    <a href="https://github.com/pedropamn/PomoClock/issues">Reportar Bug</a>
+    <a href="https://github.com/pedropamn/PomoClock/issues">Report a Bug</a>
     ·
-    <a href="https://github.com/pedropamn/PomoClock/issues">Sugerir Funcionalidade</a>
+    <a href="https://github.com/pedropamn/PomoClock/issues">Suggest a feature</a>
   </p>
 </div>
 
@@ -47,7 +47,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## Sobre o Projeto
+## About the project
 
 <div align="center">
   <img src="https://play-lh.googleusercontent.com/pyCSpYMJq9gbGEsWa3rX8eHBrV2wgfSu67w-bDy76SKkHzSeanLQh-G2l0PFwx_h3Iw=w2560-h1440-rw" width="200" height="300" /><img src="https://play-lh.googleusercontent.com/rC-9ewUFUMd7smg3nD298TQztGyxungkSuyjJU4eJiFTgeovHELDG8XzFvr2w-Zd9nE=w2560-h1440-rw" width="200" height="300"/><img src="https://play-lh.googleusercontent.com/oL9eY1yp5RcKb6RIwe_fVDESST9UcVd2BUXqg_OF-yWmQPfS-vOVMCdf7xQHGy1YHg=w2560-h1440-rw" width="200" height="300"/>
@@ -55,21 +55,21 @@
 
 <br><br>
 
-PomoClock é um simples Timer Pomodoro para Android. Com ele, você pode gerenciar tarefas e gerir seu tempo com a técnica Pomodoro, que institui um tempo de foco (geralmente 25 minutos) e um tempo de descanso (geralmente 5 minutos), customizável no app
+PomoClock is a simple Pomodoro Timer for Android. With it, you can manage tasks and manage your time with the Pomodoro technique, which establishes a focus time (generally 25 minutes) and a rest time (generally 5 minutes), customizable in the app
 
-Características:
-* Gerencie seu foco
-* Customize seu tempo
-* Seja mais produtivo :smile:
+Features:
+* Manage your focus
+* Customize your time
+* Be more productive :smile:
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-### Feito com
+### Buit with
 
-PomoClock foi criado com as seguintes tecnologias
+PomoClock was created with the following technologies:
 
 <img src="https://img.shields.io/badge/-Framework7-red?style=for-the-badge&logo=framework7&logoColor=white"></img>
 <img src="https://img.shields.io/badge/-Javascript-yellow?style=for-the-badge&logo=javascript&logoColor=white"></img>
@@ -83,7 +83,7 @@ PomoClock foi criado com as seguintes tecnologias
 
 ## Plugins
 
-O projeto foi feito com os seguintes plugins para Cordova:
+The project was made with the following Cordova Plugins:
 
 `admob-plus-cordova`
 
@@ -97,14 +97,14 @@ O projeto foi feito com os seguintes plugins para Cordova:
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Atualizar mensagens
-- [x] Vozes no app (pt-br)
-- [x] Vibração ao entrar e sair do tempo de descanso
-- [x] Alerta antes do anúncio
-- [ ] Vibração com a tela desativada
-- [ ] Adicionar notificação com barra de progresso
-- [ ] Estatísticas com tempo total e conquistas
-- [ ] Novas animações
+- [x] Update messages
+- [x] Voices in the app (pt-br)
+- [x] Vibration when entering and leaving rest time
+- [x] Alert before announcement
+- [ ] Vibration with screen off
+- [ ] Add notification with progress bar
+- [ ] Statistics with total time and achievements
+- [ ] New animations
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -112,22 +112,22 @@ O projeto foi feito com os seguintes plugins para Cordova:
 <!-- CONTRIBUTING -->
 ## Alterações necessárias
 
-Você precisará substituir os valores em `app.js`:
+You will need to replace the values in `app.js`:
 
-* `ONESIGNALAPPID` pela sua próprio APP ID do OneSignal
-* `adUnitId: 'ca-app-pub-1111111111111111/2222222222222222'`, pela sua própria chave do Google AdMob
+* `ONESIGNALAPPID` with your own OneSignal APP ID
+* `adUnitId: 'ca-app-pub-1111111111111111/2222222222222222'`, with your own Google Admob key
 
 
 <!-- CONTRIBUTING -->
-## Contribua
+## Contributing
 
-Para contribuir com o projeto, faça o Fork do projeto e envie sua feature via Pull Request:
+To contribute to the project, Fork the project and send your feature via Pull Request:
 
 1. Fork
-2. Cria uma Branch da feature (`git checkout -b feature/AmazingFeature`)
+2. Create a Branch of the feature (`git checkout -b feature/AmazingFeature`)
 3. Commit (`git commit -m 'Add some AmazingFeature'`)
 4. Push (`git push origin feature/AmazingFeature`)
-5. Abra uma Pull Request
+5. Open a Pull Request
 
 
 
@@ -135,7 +135,7 @@ Para contribuir com o projeto, faça o Fork do projeto e envie sua feature via P
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTACT -->
-## Contato
+## Contact
 
 apps@pedronetoweb.com.br
 
